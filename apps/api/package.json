@@ -1,0 +1,31 @@
+{
+  "name": "@sniffo/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "smoke:research": "tsx scripts/smokeResearch.ts",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build -w @sniffo/shared && tsx --import ./test/noPaidResearch.mjs --test test/*.test.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@sniffo/shared": "*",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "pdf-parse": "^1.1.1",
+    "sharp": "^0.35.5",
+    "tldts": "^7.4.18",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/pdf-parse": "^1.1.5",
+    "tsx": "^4.20.6"
+  }
+}

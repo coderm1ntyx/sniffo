@@ -1,0 +1,1135 @@
+{
+  "suspiciousAirbnb": {
+    "request": {
+      "sources": [
+        {
+          "id": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "type": "listing_url",
+          "name": "Airbnb listing",
+          "originalUrl": "https://www.airbnb.com/rooms/123456",
+          "extractedText": "Airbnb entire apartment. 2 bedrooms, 2 bathrooms. Payment through Airbnb checkout.",
+          "extractionStatus": "complete",
+          "integrityToken": "XtGLpZTdgR9QnqaQ4tX1MRpNCDXpa2ya6Cr1zydvaqc",
+          "evidenceKind": "server_extracted",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "6fba100f-c723-4fd8-8272-187f08124aa3",
+          "type": "conversation_text",
+          "name": "Landlord message",
+          "originalUrl": null,
+          "extractedText": "Don't pay through Airbnb. Send ฿5,000 in crypto within one hour.",
+          "extractionStatus": "complete",
+          "integrityToken": "1zGZTcwO3gLzAvWaQ86n7b804F1m5ziejL1Je8EiVz8",
+          "evidenceKind": "user_source",
+          "extractionMethod": "text"
+        }
+      ],
+      "facts": [
+        {
+          "id": "69a88d08-5d64-4991-930b-3795bcf11cf9",
+          "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "fieldName": "listingTitle",
+          "normalizedValue": "Airbnb entire apartment",
+          "quotedEvidence": "Airbnb entire apartment",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "8d663cfe-c35c-4561-9edd-747c9b3374c9",
+          "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "fieldName": "propertyType",
+          "normalizedValue": "apartment",
+          "quotedEvidence": "apartment",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "6b512e2a-388e-488d-b461-db18bd4b179e",
+          "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "fieldName": "bedroomCount",
+          "normalizedValue": 2,
+          "quotedEvidence": "2 bedrooms",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "9b6fcc5b-9b1a-4159-ad57-5f0a7c027302",
+          "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "fieldName": "bathroomCount",
+          "normalizedValue": 2,
+          "quotedEvidence": "2 bathrooms",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "41e1a08f-d43a-49b1-9dba-f1a3a697aa02",
+          "sourceId": "6fba100f-c723-4fd8-8272-187f08124aa3",
+          "fieldName": "price",
+          "normalizedValue": {
+            "amount": 5000,
+            "currency": "THB",
+            "rawCurrency": "฿",
+            "rawText": "฿5,000",
+            "basis": "unknown",
+            "basisExplicit": false
+          },
+          "quotedEvidence": "Don't pay through Airbnb. Send ฿5,000 in crypto within one hour.",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "958791fc-59a1-406b-8818-883d8ff5f9ea",
+          "sourceId": "6fba100f-c723-4fd8-8272-187f08124aa3",
+          "fieldName": "paymentMethod",
+          "normalizedValue": "cryptocurrency",
+          "quotedEvidence": "crypto",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        }
+      ]
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "redFlagScore": {
+          "modelVersion": "phase2-v1",
+          "interpretation": "concern_index",
+          "status": "scored",
+          "valueOutOf10": 4.9,
+          "explanation": "Evidence-backed concerns were found. This heuristic score is not a probability of fraud.",
+          "breakdown": [
+            {
+              "ruleId": "R01",
+              "findingId": "finding-99b34ff1396e653eee937f25",
+              "base": 4,
+              "contribution": 4,
+              "issueGroup": "payment-ad936cbeee5edc711d10d20c"
+            },
+            {
+              "ruleId": "R02",
+              "findingId": "finding-46d59ef87ae37ca4170445c2",
+              "base": 2.5,
+              "contribution": 0.6,
+              "issueGroup": "payment-ad936cbeee5edc711d10d20c"
+            },
+            {
+              "ruleId": "R04",
+              "findingId": "finding-e7e24066ba38f1458d7de2c4",
+              "base": 1,
+              "contribution": 0.3,
+              "issueGroup": "payment-ad936cbeee5edc711d10d20c"
+            },
+            {
+              "ruleId": "R12",
+              "findingId": "finding-60166f4ec6f3ca409d633b56",
+              "base": 0,
+              "contribution": 0,
+              "issueGroup": "coverage"
+            }
+          ]
+        },
+        "sourceFacts": [
+          {
+            "id": "fact-ccb6b08ae05c69df9f082b67",
+            "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+            "fieldName": "propertyType",
+            "normalizedValue": "apartment",
+            "quotedEvidence": "apartment",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-5d855619aff933a9c8641a32",
+            "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+            "fieldName": "bedroomCount",
+            "normalizedValue": 2,
+            "quotedEvidence": "2 bedrooms",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-ba9a3e78b77cc43c79865b24",
+            "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+            "fieldName": "bathroomCount",
+            "normalizedValue": 2,
+            "quotedEvidence": "2 bathrooms",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-11f3b58941a7a481a635b044",
+            "sourceId": "6fba100f-c723-4fd8-8272-187f08124aa3",
+            "fieldName": "price",
+            "normalizedValue": {
+              "amount": 5000,
+              "currency": "THB",
+              "rawCurrency": "฿",
+              "rawText": "฿5,000",
+              "basis": "unknown",
+              "basisExplicit": false
+            },
+            "quotedEvidence": "Don't pay through Airbnb. Send ฿5,000 in crypto within one hour.",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-0b97286f97cd2feba0939498",
+            "sourceId": "6fba100f-c723-4fd8-8272-187f08124aa3",
+            "fieldName": "paymentMethod",
+            "normalizedValue": "cryptocurrency",
+            "quotedEvidence": "crypto",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          }
+        ],
+        "summary": "Reviewed 2 sources. Found 0 supported inconsistencies and 3 potential warning signs. Review the cited evidence before paying.",
+        "riskAssessment": {
+          "score": 49,
+          "level": "moderate",
+          "shortReason": "Evidence-backed concerns were found. This heuristic score is not a probability of fraud.",
+          "reasonsFor": [
+            "Payment requested outside the booking platform",
+            "High-risk payment method requested",
+            "Payment demand uses a coercive deadline"
+          ],
+          "reasonsAgainst": [
+            "An absence of detected warnings does not verify the listing or recipient."
+          ],
+          "limitations": [
+            "This is a deterministic concern indicator, not a probability of fraud. Zero detected red flags does not establish safety.",
+            "Server signatures establish API issuance and integrity, not source authenticity, property ownership, or authority to rent.",
+            "Submitted sources are analyzed as claims about the same rental case; independently confirm that they describe the same property and current offer.",
+            "No external ownership, identity, image, or destination-site verification was performed.",
+            "Deterministic language checks cover tested phrases, not complete language understanding; unrecognized or ambiguous wording remains unverified.",
+            "Thai, Japanese, Korean, and Chinese checks cover tested phrases only; ambiguous or unrecognized wording remains unverified.",
+            "Unsupported client claims were excluded; they did not affect the score."
+          ]
+        },
+        "coverage": {
+          "claims": [
+            {
+              "field": "monthlyRent",
+              "label": "Monthly rent",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "depositAmount",
+              "label": "Deposit",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "upfrontTotalAmount",
+              "label": "Upfront total",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "reservationFeeAmount",
+              "label": "Reservation fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "cleaningFeeAmount",
+              "label": "Cleaning fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "administrativeFeeAmount",
+              "label": "Administrative fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "address",
+              "label": "Address",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "location",
+              "label": "Location",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "roomType",
+              "label": "Room type",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "leaseStartDate",
+              "label": "Lease start",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "leaseEndDate",
+              "label": "Lease end",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "paymentRecipient",
+              "label": "Payment recipient",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "bedroomCount",
+              "label": "Bedrooms",
+              "status": "found",
+              "value": "Airbnb listing: 2",
+              "sourceNames": ["Airbnb listing"]
+            },
+            {
+              "field": "bathroomCount",
+              "label": "Bathrooms",
+              "status": "found",
+              "value": "Airbnb listing: 2",
+              "sourceNames": ["Airbnb listing"]
+            }
+          ]
+        },
+        "propertyFacts": {
+          "prices": [
+            {
+              "amount": 5000,
+              "currency": "THB",
+              "rawCurrency": "฿",
+              "rawText": "฿5,000",
+              "basis": "unknown",
+              "basisExplicit": false,
+              "role": "current",
+              "includesFees": null,
+              "feeType": "unknown",
+              "mandatory": true,
+              "recurring": "one_time",
+              "estimate": false
+            }
+          ],
+          "listingTitle": null,
+          "propertyType": "apartment",
+          "location": null,
+          "address": null,
+          "monthlyRent": null,
+          "monthlyRentRange": null,
+          "currency": null,
+          "depositAmount": null,
+          "bedroomCount": 2,
+          "bathroomCount": 2,
+          "listingUrl": "https://www.airbnb.com/rooms/123456"
+        },
+        "findings": [
+          {
+            "id": "finding-99b34ff1396e653eee937f25",
+            "ruleId": "R01",
+            "affectedField": "paymentChannel",
+            "issueGroup": "payment-ad936cbeee5edc711d10d20c",
+            "scoreContribution": 4,
+            "evidence": [
+              {
+                "sourceId": "6fba100f-c723-4fd8-8272-187f08124aa3",
+                "quote": "Don't pay through Airbnb. Send ฿5,000 in crypto within one hour."
+              }
+            ],
+            "category": "potential_warning_sign",
+            "severity": "critical",
+            "title": "Payment requested outside the booking platform",
+            "description": "The source requests bypassing the established booking channel, which can reduce payment protections. This is a warning sign, not a finding of fraud. Evidence: “Don't pay through Airbnb. Send ฿5,000 in crypto within one hour.” (line 1).",
+            "referencedEvidence": ["6fba100f-c723-4fd8-8272-187f08124aa3"],
+            "referencedFactIds": [],
+            "recommendedAction": "Keep payment within the original booking platform. Contact platform support before transferring money."
+          },
+          {
+            "id": "finding-46d59ef87ae37ca4170445c2",
+            "ruleId": "R02",
+            "affectedField": "paymentMethod",
+            "issueGroup": "payment-ad936cbeee5edc711d10d20c",
+            "scoreContribution": 0.6,
+            "evidence": [
+              {
+                "sourceId": "6fba100f-c723-4fd8-8272-187f08124aa3",
+                "quote": "Don't pay through Airbnb. Send ฿5,000 in crypto within one hour."
+              }
+            ],
+            "category": "potential_warning_sign",
+            "severity": "high",
+            "title": "High-risk payment method requested",
+            "description": "The source requests an unusually difficult-to-reverse payment or an unrelated recipient. Verify the transaction before paying. Evidence: “Don't pay through Airbnb. Send ฿5,000 in crypto within one hour.” (line 1).",
+            "referencedEvidence": ["6fba100f-c723-4fd8-8272-187f08124aa3"],
+            "referencedFactIds": [],
+            "recommendedAction": "Avoid irreversible payment methods until you independently verify the recipient and written rental terms."
+          },
+          {
+            "id": "finding-e7e24066ba38f1458d7de2c4",
+            "ruleId": "R04",
+            "affectedField": "paymentDeadline",
+            "issueGroup": "payment-ad936cbeee5edc711d10d20c",
+            "scoreContribution": 0.3,
+            "evidence": [
+              {
+                "sourceId": "6fba100f-c723-4fd8-8272-187f08124aa3",
+                "quote": "Don't pay through Airbnb. Send ฿5,000 in crypto within one hour."
+              }
+            ],
+            "category": "potential_warning_sign",
+            "severity": "medium",
+            "title": "Payment demand uses a coercive deadline",
+            "description": "A short payment deadline or refusal to allow questions can prevent reasonable verification. Evidence: “Don't pay through Airbnb. Send ฿5,000 in crypto within one hour.” (line 1).",
+            "referencedEvidence": ["6fba100f-c723-4fd8-8272-187f08124aa3"],
+            "referencedFactIds": [],
+            "recommendedAction": "Do not let a payment deadline prevent verification. Ask for time to review the terms."
+          },
+          {
+            "id": "finding-60166f4ec6f3ca409d633b56",
+            "ruleId": "R12",
+            "issueGroup": "coverage",
+            "scoreContribution": 0,
+            "evidence": [],
+            "category": "unable_to_verify",
+            "severity": "info",
+            "title": "Verification coverage is limited",
+            "description": "Server signatures establish API issuance and integrity, not source authenticity, property ownership, or authority to rent. Submitted sources are analyzed as claims about the same rental case; independently confirm that they describe the same property and current offer. No external ownership, identity, image, or destination-site verification was performed. Deterministic language checks cover tested phrases, not complete language understanding; unrecognized or ambiguous wording remains unverified. Thai, Japanese, Korean, and Chinese checks cover tested phrases only; ambiguous or unrecognized wording remains unverified. Unsupported client claims were excluded; they did not affect the score.",
+            "referencedEvidence": [
+              "28d4ee69-8082-4698-83c2-b296b526e8b4",
+              "6fba100f-c723-4fd8-8272-187f08124aa3"
+            ],
+            "recommendedAction": "Add independent confirmation or written booking terms to improve verification coverage."
+          }
+        ],
+        "evidenceDiagnostics": [
+          {
+            "factId": "69a88d08-5d64-4991-930b-3795bcf11cf9",
+            "code": "FACT_NOT_CORROBORATED",
+            "message": "Client fact excluded; only source-backed server claims drive analysis."
+          }
+        ],
+        "recommendations": [
+          "Keep payment within the original booking platform. Contact platform support before transferring money.",
+          "Avoid irreversible payment methods until you independently verify the recipient and written rental terms.",
+          "Do not let a payment deadline prevent verification. Ask for time to review the terms.",
+          "Add independent confirmation or written booking terms to improve verification coverage."
+        ]
+      }
+    }
+  },
+  "conflictingMonthlyRent": {
+    "request": {
+      "sources": [
+        {
+          "id": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+          "type": "listing_text",
+          "name": "Monthly listing",
+          "originalUrl": null,
+          "extractedText": "Monthly rent: ฿28,000/month",
+          "extractionStatus": "complete",
+          "integrityToken": "rCgjTVAykaaA8G80naoLz2rhq4mJYryUT0O5gqjP75I",
+          "evidenceKind": "user_source",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "f96be2b8-e9f5-4565-b35f-108a247d5fcc",
+          "type": "rental_agreement_pdf",
+          "name": "Agreement text",
+          "originalUrl": null,
+          "extractedText": "Monthly rent: ฿35,000/month",
+          "extractionStatus": "complete",
+          "integrityToken": "5PD3GR-W9C_UQnKOrAIp4gd2bnKuFXSjPtWtppX9RkQ",
+          "evidenceKind": "user_source",
+          "extractionMethod": "text"
+        }
+      ],
+      "facts": [
+        {
+          "id": "000ead75-172c-49ae-8357-eab00462fafc",
+          "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+          "fieldName": "listingTitle",
+          "normalizedValue": "Monthly rent: ฿28,000/month",
+          "quotedEvidence": "Monthly rent: ฿28,000/month",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "ba95aa11-02be-48cc-b0ec-1a64c0694c10",
+          "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+          "fieldName": "price",
+          "normalizedValue": {
+            "amount": 28000,
+            "currency": "THB",
+            "rawCurrency": "฿",
+            "rawText": "฿28,000",
+            "basis": "monthly_rent",
+            "basisExplicit": true
+          },
+          "quotedEvidence": "Monthly rent: ฿28,000/month",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "5ec8bbc9-5820-4901-90af-6ca17ea23b93",
+          "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+          "fieldName": "monthlyRent",
+          "normalizedValue": 28000,
+          "quotedEvidence": "Monthly rent: ฿28,000/month",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "488ba3cc-35e5-4bc4-987c-20d4f86f07c3",
+          "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+          "fieldName": "currency",
+          "normalizedValue": "THB",
+          "quotedEvidence": "Monthly rent: ฿28,000/month",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "2793cbff-0a47-4cc1-b3b0-5db8555eb699",
+          "sourceId": "f96be2b8-e9f5-4565-b35f-108a247d5fcc",
+          "fieldName": "price",
+          "normalizedValue": {
+            "amount": 35000,
+            "currency": "THB",
+            "rawCurrency": "฿",
+            "rawText": "฿35,000",
+            "basis": "monthly_rent",
+            "basisExplicit": true
+          },
+          "quotedEvidence": "Monthly rent: ฿35,000/month",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "1b4d119f-ba4c-4c48-a574-a9d6c36a752a",
+          "sourceId": "f96be2b8-e9f5-4565-b35f-108a247d5fcc",
+          "fieldName": "monthlyRent",
+          "normalizedValue": 35000,
+          "quotedEvidence": "Monthly rent: ฿35,000/month",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "a1d0896f-33ab-4a6c-9e6b-7aebd39fc6eb",
+          "sourceId": "f96be2b8-e9f5-4565-b35f-108a247d5fcc",
+          "fieldName": "currency",
+          "normalizedValue": "THB",
+          "quotedEvidence": "Monthly rent: ฿35,000/month",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        }
+      ]
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "redFlagScore": {
+          "modelVersion": "phase2-v1",
+          "interpretation": "concern_index",
+          "status": "scored",
+          "valueOutOf10": 2.5,
+          "explanation": "Evidence-backed concerns were found. This heuristic score is not a probability of fraud.",
+          "breakdown": [
+            {
+              "ruleId": "R06",
+              "findingId": "finding-9c0202677d4b0ea9d0c864be",
+              "base": 2.5,
+              "contribution": 2.5,
+              "issueGroup": "comparison-50e95ca0d2ea824cd62523f7"
+            },
+            {
+              "ruleId": "R12",
+              "findingId": "finding-fbbade41d9e951d63490b2ff",
+              "base": 0,
+              "contribution": 0,
+              "issueGroup": "coverage"
+            }
+          ]
+        },
+        "sourceFacts": [
+          {
+            "id": "fact-afd2aa942fd3360b40e6ac94",
+            "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+            "fieldName": "listingTitle",
+            "normalizedValue": "Monthly rent: ฿28,000/month",
+            "quotedEvidence": "Monthly rent: ฿28,000/month",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-3ecc3afdd0bb291674f867b3",
+            "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+            "fieldName": "price",
+            "normalizedValue": {
+              "amount": 28000,
+              "currency": "THB",
+              "rawCurrency": "฿",
+              "rawText": "฿28,000",
+              "basis": "monthly_rent",
+              "basisExplicit": true
+            },
+            "quotedEvidence": "Monthly rent: ฿28,000/month",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-fe1afb76ef80e9db777e10b7",
+            "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+            "fieldName": "monthlyRent",
+            "normalizedValue": 28000,
+            "quotedEvidence": "Monthly rent: ฿28,000/month",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-91aec489b1701ecaaee70e16",
+            "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+            "fieldName": "currency",
+            "normalizedValue": "THB",
+            "quotedEvidence": "Monthly rent: ฿28,000/month",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-78c38a20edbcf8bab4d892d3",
+            "sourceId": "f96be2b8-e9f5-4565-b35f-108a247d5fcc",
+            "fieldName": "price",
+            "normalizedValue": {
+              "amount": 35000,
+              "currency": "THB",
+              "rawCurrency": "฿",
+              "rawText": "฿35,000",
+              "basis": "monthly_rent",
+              "basisExplicit": true
+            },
+            "quotedEvidence": "Monthly rent: ฿35,000/month",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-bc9c553fb1ed4aae8fb44aeb",
+            "sourceId": "f96be2b8-e9f5-4565-b35f-108a247d5fcc",
+            "fieldName": "monthlyRent",
+            "normalizedValue": 35000,
+            "quotedEvidence": "Monthly rent: ฿35,000/month",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-bcad64756cf74038b61d9592",
+            "sourceId": "f96be2b8-e9f5-4565-b35f-108a247d5fcc",
+            "fieldName": "currency",
+            "normalizedValue": "THB",
+            "quotedEvidence": "Monthly rent: ฿35,000/month",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          }
+        ],
+        "summary": "Reviewed 2 sources. Found 1 supported inconsistency and 0 potential warning signs. Review the cited evidence before paying.",
+        "riskAssessment": {
+          "score": 25,
+          "level": "moderate",
+          "shortReason": "Evidence-backed concerns were found. This heuristic score is not a probability of fraud.",
+          "reasonsFor": ["Different monthly rent details"],
+          "reasonsAgainst": [
+            "An absence of detected warnings does not verify the listing or recipient."
+          ],
+          "limitations": [
+            "This is a deterministic concern indicator, not a probability of fraud. Zero detected red flags does not establish safety.",
+            "Server signatures establish API issuance and integrity, not source authenticity, property ownership, or authority to rent.",
+            "Submitted sources are analyzed as claims about the same rental case; independently confirm that they describe the same property and current offer.",
+            "No external ownership, identity, image, or destination-site verification was performed.",
+            "Deterministic language checks cover tested phrases, not complete language understanding; unrecognized or ambiguous wording remains unverified.",
+            "No payment messages were supplied; actual payment instructions could not be assessed.",
+            "Thai, Japanese, Korean, and Chinese checks cover tested phrases only; ambiguous or unrecognized wording remains unverified."
+          ]
+        },
+        "coverage": {
+          "claims": [
+            {
+              "field": "monthlyRent",
+              "label": "Monthly rent",
+              "status": "conflict",
+              "value": "Monthly listing: 28000 · Agreement text: 35000",
+              "sourceNames": ["Monthly listing", "Agreement text"]
+            },
+            {
+              "field": "depositAmount",
+              "label": "Deposit",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "upfrontTotalAmount",
+              "label": "Upfront total",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "reservationFeeAmount",
+              "label": "Reservation fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "cleaningFeeAmount",
+              "label": "Cleaning fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "administrativeFeeAmount",
+              "label": "Administrative fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "address",
+              "label": "Address",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "location",
+              "label": "Location",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "roomType",
+              "label": "Room type",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "leaseStartDate",
+              "label": "Lease start",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "leaseEndDate",
+              "label": "Lease end",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "paymentRecipient",
+              "label": "Payment recipient",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "bedroomCount",
+              "label": "Bedrooms",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "bathroomCount",
+              "label": "Bathrooms",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            }
+          ]
+        },
+        "propertyFacts": {
+          "prices": [
+            {
+              "amount": 28000,
+              "currency": "THB",
+              "rawCurrency": "฿",
+              "rawText": "฿28,000",
+              "basis": "monthly_rent",
+              "basisExplicit": true,
+              "role": "current",
+              "includesFees": null,
+              "feeType": "monthly_rent",
+              "mandatory": true,
+              "recurring": "one_time",
+              "estimate": false
+            },
+            {
+              "amount": 35000,
+              "currency": "THB",
+              "rawCurrency": "฿",
+              "rawText": "฿35,000",
+              "basis": "monthly_rent",
+              "basisExplicit": true,
+              "role": "current",
+              "includesFees": null,
+              "feeType": "monthly_rent",
+              "mandatory": true,
+              "recurring": "one_time",
+              "estimate": false
+            }
+          ],
+          "listingTitle": "Monthly rent: ฿28,000/month",
+          "propertyType": null,
+          "location": null,
+          "address": null,
+          "monthlyRent": 28000,
+          "monthlyRentRange": null,
+          "currency": "THB",
+          "depositAmount": null,
+          "bedroomCount": null,
+          "bathroomCount": null,
+          "listingUrl": null
+        },
+        "findings": [
+          {
+            "id": "finding-9c0202677d4b0ea9d0c864be",
+            "ruleId": "R06",
+            "affectedField": "monthly_rent",
+            "issueGroup": "comparison-50e95ca0d2ea824cd62523f7",
+            "scoreContribution": 2.5,
+            "evidence": [
+              {
+                "sourceId": "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+                "factId": "fact-3ecc3afdd0bb291674f867b3",
+                "quote": "Monthly rent: ฿28,000/month",
+                "claimId": "claim-656556a3917676f19297793f"
+              },
+              {
+                "sourceId": "f96be2b8-e9f5-4565-b35f-108a247d5fcc",
+                "factId": "fact-78c38a20edbcf8bab4d892d3",
+                "quote": "Monthly rent: ฿35,000/month",
+                "claimId": "claim-5d43573f5453e8936b00d913"
+              }
+            ],
+            "category": "confirmed_inconsistency",
+            "severity": "high",
+            "title": "Different monthly rent details",
+            "description": "Comparable claims in the submitted evidence disagree. This establishes an inconsistency between those claims, not which source is true. Monthly listing: THB 28,000 (monthly_rent) based on “Monthly rent: ฿28,000/month”. Agreement text: THB 35,000 (monthly_rent) based on “Monthly rent: ฿35,000/month”.",
+            "referencedEvidence": [
+              "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+              "f96be2b8-e9f5-4565-b35f-108a247d5fcc"
+            ],
+            "referencedFactIds": [
+              "fact-3ecc3afdd0bb291674f867b3",
+              "fact-78c38a20edbcf8bab4d892d3"
+            ],
+            "recommendedAction": "Ask for an itemized price breakdown for the same dates, guest count, currency, and fee basis."
+          },
+          {
+            "id": "finding-fbbade41d9e951d63490b2ff",
+            "ruleId": "R12",
+            "issueGroup": "coverage",
+            "scoreContribution": 0,
+            "evidence": [],
+            "category": "unable_to_verify",
+            "severity": "info",
+            "title": "Verification coverage is limited",
+            "description": "Server signatures establish API issuance and integrity, not source authenticity, property ownership, or authority to rent. Submitted sources are analyzed as claims about the same rental case; independently confirm that they describe the same property and current offer. No external ownership, identity, image, or destination-site verification was performed. Deterministic language checks cover tested phrases, not complete language understanding; unrecognized or ambiguous wording remains unverified. No payment messages were supplied; actual payment instructions could not be assessed. Thai, Japanese, Korean, and Chinese checks cover tested phrases only; ambiguous or unrecognized wording remains unverified.",
+            "referencedEvidence": [
+              "0abe6849-2aa3-45e0-ba1c-6c4df1ca9b8d",
+              "f96be2b8-e9f5-4565-b35f-108a247d5fcc"
+            ],
+            "recommendedAction": "Provide written lease and payment terms, and independently confirm the property and landlord or agent’s authority."
+          }
+        ],
+        "evidenceDiagnostics": [],
+        "recommendations": [
+          "Ask for an itemized price breakdown for the same dates, guest count, currency, and fee basis.",
+          "Provide written lease and payment terms, and independently confirm the property and landlord or agent’s authority."
+        ]
+      }
+    }
+  },
+  "insufficientEvidence": {
+    "request": {
+      "sources": [
+        {
+          "id": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "type": "listing_url",
+          "name": "Airbnb listing",
+          "originalUrl": "https://www.airbnb.com/rooms/123456",
+          "extractedText": "Airbnb entire apartment. 2 bedrooms, 2 bathrooms. Payment through Airbnb checkout.",
+          "extractionStatus": "complete",
+          "integrityToken": "XtGLpZTdgR9QnqaQ4tX1MRpNCDXpa2ya6Cr1zydvaqc",
+          "evidenceKind": "server_extracted",
+          "extractionMethod": "text"
+        }
+      ],
+      "facts": [
+        {
+          "id": "69a88d08-5d64-4991-930b-3795bcf11cf9",
+          "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "fieldName": "listingTitle",
+          "normalizedValue": "Airbnb entire apartment",
+          "quotedEvidence": "Airbnb entire apartment",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "8d663cfe-c35c-4561-9edd-747c9b3374c9",
+          "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "fieldName": "propertyType",
+          "normalizedValue": "apartment",
+          "quotedEvidence": "apartment",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "6b512e2a-388e-488d-b461-db18bd4b179e",
+          "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "fieldName": "bedroomCount",
+          "normalizedValue": 2,
+          "quotedEvidence": "2 bedrooms",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        },
+        {
+          "id": "9b6fcc5b-9b1a-4159-ad57-5f0a7c027302",
+          "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+          "fieldName": "bathroomCount",
+          "normalizedValue": 2,
+          "quotedEvidence": "2 bathrooms",
+          "textLocation": "Line 1",
+          "extractionMethod": "text"
+        }
+      ]
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "redFlagScore": {
+          "modelVersion": "phase2-v1",
+          "interpretation": "concern_index",
+          "status": "insufficient_evidence",
+          "valueOutOf10": null,
+          "explanation": "There is not enough independent, relevant source content to score. Add payment messages or written booking terms.",
+          "breakdown": [
+            {
+              "ruleId": "R12",
+              "findingId": "finding-ef58673d4c3d2984fe868c99",
+              "base": 0,
+              "contribution": 0,
+              "issueGroup": "coverage"
+            }
+          ]
+        },
+        "sourceFacts": [
+          {
+            "id": "fact-ccb6b08ae05c69df9f082b67",
+            "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+            "fieldName": "propertyType",
+            "normalizedValue": "apartment",
+            "quotedEvidence": "apartment",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-5d855619aff933a9c8641a32",
+            "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+            "fieldName": "bedroomCount",
+            "normalizedValue": 2,
+            "quotedEvidence": "2 bedrooms",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          },
+          {
+            "id": "fact-ba9a3e78b77cc43c79865b24",
+            "sourceId": "28d4ee69-8082-4698-83c2-b296b526e8b4",
+            "fieldName": "bathroomCount",
+            "normalizedValue": 2,
+            "quotedEvidence": "2 bathrooms",
+            "textLocation": "Line 1",
+            "extractionMethod": "text"
+          }
+        ],
+        "summary": "Reviewed 1 source. Found 0 supported inconsistencies and 0 potential warning signs. Review the cited evidence before paying.",
+        "riskAssessment": {
+          "score": 0,
+          "level": "low",
+          "shortReason": "There is not enough independent, relevant source content to score. Add payment messages or written booking terms.",
+          "reasonsFor": [],
+          "reasonsAgainst": [
+            "An absence of detected warnings does not verify the listing or recipient."
+          ],
+          "limitations": [
+            "This is a deterministic concern indicator, not a probability of fraud. Zero detected red flags does not establish safety.",
+            "Server signatures establish API issuance and integrity, not source authenticity, property ownership, or authority to rent.",
+            "Submitted sources are analyzed as claims about the same rental case; independently confirm that they describe the same property and current offer.",
+            "No external ownership, identity, image, or destination-site verification was performed.",
+            "Deterministic language checks cover tested phrases, not complete language understanding; unrecognized or ambiguous wording remains unverified.",
+            "Only one or no distinct readable source is available; independent corroboration is missing.",
+            "No payment messages were supplied; actual payment instructions could not be assessed.",
+            "Unsupported client claims were excluded; they did not affect the score."
+          ]
+        },
+        "coverage": {
+          "claims": [
+            {
+              "field": "monthlyRent",
+              "label": "Monthly rent",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "depositAmount",
+              "label": "Deposit",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "upfrontTotalAmount",
+              "label": "Upfront total",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "reservationFeeAmount",
+              "label": "Reservation fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "cleaningFeeAmount",
+              "label": "Cleaning fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "administrativeFeeAmount",
+              "label": "Administrative fee",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "address",
+              "label": "Address",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "location",
+              "label": "Location",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "roomType",
+              "label": "Room type",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "leaseStartDate",
+              "label": "Lease start",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "leaseEndDate",
+              "label": "Lease end",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "paymentRecipient",
+              "label": "Payment recipient",
+              "status": "not_found",
+              "value": null,
+              "sourceNames": []
+            },
+            {
+              "field": "bedroomCount",
+              "label": "Bedrooms",
+              "status": "found",
+              "value": "Airbnb listing: 2",
+              "sourceNames": ["Airbnb listing"]
+            },
+            {
+              "field": "bathroomCount",
+              "label": "Bathrooms",
+              "status": "found",
+              "value": "Airbnb listing: 2",
+              "sourceNames": ["Airbnb listing"]
+            }
+          ]
+        },
+        "propertyFacts": {
+          "prices": [],
+          "listingTitle": null,
+          "propertyType": "apartment",
+          "location": null,
+          "address": null,
+          "monthlyRent": null,
+          "monthlyRentRange": null,
+          "currency": null,
+          "depositAmount": null,
+          "bedroomCount": 2,
+          "bathroomCount": 2,
+          "listingUrl": "https://www.airbnb.com/rooms/123456"
+        },
+        "findings": [
+          {
+            "id": "finding-ef58673d4c3d2984fe868c99",
+            "ruleId": "R12",
+            "issueGroup": "coverage",
+            "scoreContribution": 0,
+            "evidence": [],
+            "category": "unable_to_verify",
+            "severity": "info",
+            "title": "Verification coverage is limited",
+            "description": "Server signatures establish API issuance and integrity, not source authenticity, property ownership, or authority to rent. Submitted sources are analyzed as claims about the same rental case; independently confirm that they describe the same property and current offer. No external ownership, identity, image, or destination-site verification was performed. Deterministic language checks cover tested phrases, not complete language understanding; unrecognized or ambiguous wording remains unverified. Only one or no distinct readable source is available; independent corroboration is missing. No payment messages were supplied; actual payment instructions could not be assessed. Unsupported client claims were excluded; they did not affect the score.",
+            "referencedEvidence": ["28d4ee69-8082-4698-83c2-b296b526e8b4"],
+            "recommendedAction": "Add independent confirmation or written booking terms to improve verification coverage."
+          }
+        ],
+        "evidenceDiagnostics": [
+          {
+            "factId": "69a88d08-5d64-4991-930b-3795bcf11cf9",
+            "code": "FACT_NOT_CORROBORATED",
+            "message": "Client fact excluded; only source-backed server claims drive analysis."
+          }
+        ],
+        "recommendations": [
+          "Add independent confirmation or written booking terms to improve verification coverage."
+        ]
+      }
+    }
+  }
+}

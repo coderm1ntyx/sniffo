@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Airbnb apartment",
+    "title": "Canal Residence Apartment",
+    "description": "Entire apartment for rent. Unit A1204. Address: 195 Rama 9 Road, Bangkok. 2 bedrooms. THB 2200 per night.",
+    "category": "apartment"
+  },
+  {
+    "name": "Hotel or serviced apartment",
+    "title": "Lotus Hotel Bangkok",
+    "description": "Hotel serviced room for rent. Room number 704. Address: 155 Sukhumvit Road, Bangkok. 1 bedroom. THB 1800 per night.",
+    "category": "hotel"
+  },
+  {
+    "name": "House or villa",
+    "title": "River Garden Villa",
+    "description": "House villa for rent. Address: 121 Riverside Road, Bangkok. 3 bedrooms. THB 40000 per month. This detached villa has a distinctive curved staircase beside an enclosed courtyard garden and library.",
+    "category": "house"
+  },
+  {
+    "name": "Private room",
+    "title": "Sukhumvit Private Room",
+    "description": "Private room for rent. Room number 406. Address: 123 Sukhumvit Road, Bangkok. 1 bedroom. THB 900 per night.",
+    "category": "room"
+  },
+  {
+    "name": "Long term monthly rental",
+    "title": "Orchid Monthly Apartment",
+    "description": "Apartment for rent. Unit B901. Address: 455 Silom Road, Bangkok. 2 bedrooms. Monthly rent THB 25000.",
+    "category": "apartment"
+  },
+  {
+    "name": "Commercial office",
+    "title": "Riverside Commercial Office",
+    "description": "Office commercial property for rent. Unit C604. Address: 588 Silom Road, Bangkok. Floor area: 120 sqm. THB 60000 per month.",
+    "category": "commercial"
+  },
+  {
+    "name": "Land",
+    "title": "Chiang Mai Garden Land",
+    "description": "Land for sale. Address: 452 Garden Road, Chiang Mai. Area 800 sqm. This garden plot is bordered by a stream on its east side and a distinctive old brick wall on the west.",
+    "category": "land"
+  },
+  {
+    "name": "Manual no URL",
+    "title": "Garden Office for Lease",
+    "description": "Office for rent in Bangkok with 60 sqm floor area. Monthly rent THB 18000.",
+    "category": "commercial"
+  },
+  {
+    "name": "Same building different unit",
+    "title": "Canal Residence Apartment",
+    "description": "Apartment for rent. Unit A1205. Address: 195 Rama 9 Road, Bangkok. 1 bedroom.",
+    "category": "apartment"
+  },
+  {
+    "name": "Similar title different property",
+    "title": "Canal Garden Villa",
+    "description": "House villa for rent. Address: 333 Beach Road, Phuket. 4 bedrooms.",
+    "category": "house"
+  },
+  {
+    "name": "Reused photos no location contradiction",
+    "title": "Canal Residence Apartment",
+    "description": "Apartment for rent. Unit A1204. Address: 195 Rama 9 Road, Bangkok. 2 bedrooms. Available on another booking platform.",
+    "category": "apartment"
+  },
+  {
+    "name": "Matching photos conflicting location",
+    "title": "Canal Residence Apartment",
+    "description": "Apartment for rent. Unit A1204. Address: 533 Beach Road, Phuket. 2 bedrooms.",
+    "category": "apartment"
+  },
+  {
+    "name": "No accessible external sources",
+    "title": "Closed Listing Apartment",
+    "description": "Apartment for rent in Bangkok. Monthly rent THB 20000.",
+    "category": "apartment"
+  },
+  {
+    "name": "Nightly and stay total",
+    "title": "Five Night Apartment Offer",
+    "description": "Apartment for rent in Bangkok. THB 1500 per night. Total for 5 nights THB 7500.",
+    "category": "apartment"
+  },
+  {
+    "name": "Thai property",
+    "title": "คอนโดสวนสวย สุขุมวิท กรุงเทพ",
+    "description": "คอนโดให้เช่า กรุงเทพ สุขุมวิท ห้องเลขที่ ๒๐๔ ขนาด 55 sqm ค่าเช่า 25000 บาทต่อเดือน",
+    "category": "apartment"
+  }
+]

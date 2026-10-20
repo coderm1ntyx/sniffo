@@ -1,0 +1,34 @@
+{
+  "runtime": "v22.22.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "sampleCount": 50,
+  "warmupCount": 10,
+  "sourceCount": 12,
+  "requestBytes": 52572,
+  "claimCount": 42,
+  "comparisonCount": 66,
+  "ai": "off; no network calls",
+  "metrics": {
+    "evidenceValidation": {
+      "medianMs": 6.501,
+      "p95Ms": 11.814
+    },
+    "claimNormalization": {
+      "medianMs": 4.948,
+      "p95Ms": 9.267
+    },
+    "ruleEvaluation": {
+      "medianMs": 1.381,
+      "p95Ms": 3.835
+    },
+    "scoring": {
+      "medianMs": 0.698,
+      "p95Ms": 1.577
+    },
+    "total": {
+      "medianMs": 13.52,
+      "p95Ms": 25.745
+    }
+  }
+}

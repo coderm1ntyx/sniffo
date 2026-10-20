@@ -1,0 +1,155 @@
+[
+  {
+    "name": "GraphQL listing identity and overview",
+    "embedded": {
+      "data": {
+        "node": {
+          "__typename": "DemandStayListing",
+          "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTIz",
+          "personCapacity": 3,
+          "propertyType": "APARTMENT",
+          "spaceType": "ENTIRE_HOME",
+          "pdpPresentation": {
+            "title": { "content": { "localizedString": "Quiet apartment 🦊" } },
+            "location": { "subtitle": "Yan Nawa, Bangkok, Thailand" },
+            "overview": {
+              "title": "Entire rental unit in Yan Nawa, Thailand",
+              "items": ["3 guests", "2 bedrooms", "4 beds", "1.5 baths"]
+            },
+            "sharingConfig": {
+              "propertyType": "Entire rental unit",
+              "imageUrl": "https://images.example/cover.jpg"
+            },
+            "descriptions": {
+              "longDescriptionHtml": {
+                "localizedString": "A quiet stay.<br><br>Second paragraph."
+              }
+            },
+            "hostInfo": {
+              "passportData": { "name": "Host", "isSuperhost": true }
+            },
+            "amenities": {
+              "previewAmenitiesGroups": [
+                {
+                  "amenities": [
+                    {
+                      "__typename": "AmenityItem",
+                      "title": "Wifi",
+                      "available": true
+                    },
+                    {
+                      "__typename": "AmenityItem",
+                      "title": "Pool",
+                      "available": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "rules": {
+              "items": [
+                {
+                  "__typename": "StaysPdpDetailItem",
+                  "type": "HOUSE_RULES_PETS",
+                  "title": "No pets"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "expected": {
+      "listingTitle": "Quiet apartment 🦊",
+      "propertyType": "Entire rental unit",
+      "location": "Yan Nawa, Bangkok, Thailand",
+      "bedroomCount": 2,
+      "bedCount": 4,
+      "bathroomCount": 1.5,
+      "maxGuests": 3,
+      "hostName": "Host",
+      "amenity": "Wifi",
+      "houseRule": "No pets"
+    }
+  },
+  {
+    "name": "legacy public detail sections",
+    "embedded": {
+      "data": {
+        "stayProductDetailPage": {
+          "sections": {
+            "metadata": {
+              "sharingConfig": {
+                "title": "Farm stay in Phang Tru · 1 bedroom · 2 beds · 1 bath"
+              }
+            },
+            "sections": [
+              {
+                "section": {
+                  "shareSave": {
+                    "embedData": {
+                      "id": "123",
+                      "name": "Green fields",
+                      "propertyType": "Farm stay",
+                      "personCapacity": 3,
+                      "pictureUrl": "https://images.example/farm.jpg"
+                    }
+                  }
+                }
+              },
+              {
+                "section": {
+                  "__typename": "GeneralListContentSection",
+                  "items": [
+                    {
+                      "title": "The space",
+                      "html": { "htmlText": "Green fields &amp; fresh air." }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "expected": {
+      "listingTitle": "Green fields",
+      "location": "Phang Tru",
+      "propertyType": "Farm stay",
+      "bedroomCount": 1,
+      "bedCount": 2,
+      "bathroomCount": 1,
+      "maxGuests": 3
+    }
+  },
+  {
+    "name": "Unicode JSON-LD address",
+    "jsonLd": {
+      "@type": "Apartment",
+      "url": "https://www.airbnb.com/rooms/123",
+      "name": "東京の家",
+      "description": "こんにちは 🌸",
+      "address": {
+        "addressLocality": "新宿区",
+        "addressRegion": "東京都",
+        "addressCountry": "日本"
+      },
+      "numberOfBedrooms": 1,
+      "numberOfBeds": 2,
+      "numberOfBathroomsTotal": 1,
+      "occupancy": { "value": 3 }
+    },
+    "expected": {
+      "listingTitle": "東京の家",
+      "location": "新宿区, 東京都, 日本",
+      "locality": "新宿区",
+      "region": "東京都",
+      "country": "日本",
+      "bedroomCount": 1,
+      "bedCount": 2,
+      "bathroomCount": 1,
+      "maxGuests": 3
+    }
+  }
+]

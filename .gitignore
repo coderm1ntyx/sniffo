@@ -1,0 +1,32 @@
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+# Local configuration and secrets. Keep safe templates committed.
+.env
+.env.*
+!.env.example
+# Runtime output and local-only data.
+*.log
+*.pid
+*.seed
+*.stackdump
+.DS_Store
+Thumbs.db
+uploads/
+tmp/
+# Local databases, credentials, and generated model weights.
+*.db
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+models/
+*.gguf
+*.bin
+*.safetensors
+*.tsbuildinfo

@@ -1,0 +1,55 @@
+[
+  {
+    "name": "A Airbnb",
+    "text": "Luxury 2 bedroom - Infinity Pool - Gym\nYan Nawa, Bangkok, Thailand\nEntire rental unit\n฿11,886 for 5 nights\nOctober 17–22, 2026\n3 guests, 2 bedrooms, 2 beds, 2 bathrooms\nHosted by Krit\n5.0 from 3 reviews\nRooftop infinity pool\nFitness center\nWi-Fi\nNo cooking in the room",
+    "basis": "stay_total",
+    "amount": 11886,
+    "currency": "THB",
+    "bedroomCount": 2
+  },
+  {
+    "name": "B Monthly",
+    "text": "Modern 2BR Condo near BTS Asok\nWatthana, Bangkok, Thailand\nCondominium\n฿28,000/month\nSecurity deposit: ฿56,000\n2 bedrooms, 2 bathrooms\n85 m²",
+    "basis": "monthly_rent",
+    "amount": 28000,
+    "currency": "THB",
+    "bedroomCount": 2
+  },
+  {
+    "name": "C Ambiguous",
+    "text": "Cozy Studio in Bangkok\nPrice: ฿18,000. Contact us for details.",
+    "basis": "unknown",
+    "amount": 18000,
+    "currency": "THB"
+  },
+  {
+    "name": "D Metadata",
+    "html": "<html><head><script type=\"application/ld+json\">{\"@type\":\"Apartment\",\"offers\":{\"price\":11886,\"priceCurrency\":\"THB\"}}</script></head><body><p>฿11,886 for 5 nights</p></body></html>",
+    "basis": "stay_total",
+    "amount": 11886,
+    "currency": "THB"
+  },
+  {
+    "name": "E USD",
+    "text": "Monthly rent: USD 900",
+    "basis": "monthly_rent",
+    "amount": 900,
+    "currency": "USD"
+  },
+  {
+    "name": "F Numbers",
+    "text": "2 bedrooms, 2 beds, 2 bathrooms, 3 guests, 5 nights, 3 reviews",
+    "bedroomCount": 2
+  },
+  {
+    "name": "G Missing",
+    "text": "Beautiful apartment near the river. Contact the host for pricing."
+  },
+  {
+    "name": "H Thai",
+    "text": "ค่าเช่า 28,000 บาท/เดือน มัดจำ 56,000 บาท",
+    "basis": "monthly_rent",
+    "amount": 28000,
+    "currency": "THB"
+  }
+]
