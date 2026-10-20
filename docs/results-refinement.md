@@ -50,7 +50,7 @@ Measurements use the unchanged three-finding demo, with all disclosures closed, 
 
 At 1280 × 800, the report content decreased from about 1428 px to 1246 px (about 13%), while adding the score/coverage presentation. The primary expanded-state improvement is structural: arbitrarily long evidence no longer grows the right column or creates a matching empty left column. The demo's default report columns differ by about 25 px in height across all five sizes. No horizontal overflow was detected.
 
-Screenshots and raw dimensions are saved in `/Users/m1ntyx/.codex/visualizations/2026/10/15/01a13eff-fc5e-7933-aef0-74329865ed30/` as `results-refined-{width}.jpg` and `results-height-measurements.json`.
+Screenshots and raw dimensions are saved in a local visualization directory as `results-refined-{width}.jpg` and `results-height-measurements.json`.
 
 ## Scoring and short stays
 

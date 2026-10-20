@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test:e2e": "playwright test",
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite",
     "test:review-evidence": "tsx --test test/reviewEvidence.test.ts",
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b --pretty false",

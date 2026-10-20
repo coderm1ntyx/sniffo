@@ -92,7 +92,11 @@ npm test             # Run shared, API, and web unit tests
 npm run typecheck    # Type-check all workspaces
 npm run lint         # Run ESLint
 npm run build        # Build all workspaces
+npm exec --workspace @sniffo/web -- playwright install chromium
+npm run test:e2e -w @sniffo/web
 ```
+
+The last two commands install the Playwright browser and run the desktop and mobile browser tests. Playwright starts the local API and web servers for the tests. The web development server binds to `127.0.0.1` by default; for trusted-LAN testing, set `SNIFFO_ALLOW_LAN=true` before starting `npm run dev:web`.
 
 ## Environment variables
 
