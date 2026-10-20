@@ -1,5 +1,9 @@
 # Sniffo
 
+<p align="center">
+  <img src="apps/web/src/assets/landing/readme-hero.png" alt="Sniffo landing page preview" width="900" />
+</p>
+
 **Check rental details for warning signs before you pay.** Sniffo is a U-Hackathon project that helps renters compare claims across a property listing, landlord messages, payment requests, and rental agreements. It highlights supported inconsistencies, cites the evidence submitted, and explains what it could not verify.
 
 > **Hackathon prototype:** Sniffo is an experimental, unhosted project, not a production-ready service or a substitute for independent checks or professional advice. Findings are informational, can be incomplete or wrong, and are not proof that a person or listing is fraudulent. Do not use real identity documents, payment credentials, or other sensitive personal information in testing.
